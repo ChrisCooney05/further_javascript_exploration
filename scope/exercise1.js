@@ -1,46 +1,49 @@
-
 // For all of these, what is the value of a when the function gets called with the alert()
 // #1
 function q1() {
-    var a = 5;
-    if(a > 1) {
-        a = 3;
-    }
-    alert(a);
+  var a = 5;
+  if (a > 1) {
+    a = 3;
+  }
+  alert(a);
 }
+// alert will === 3
 
 //#2
 var a = 0;
 function q2() {
-    a = 5;
+  a = 5;
 }
 
 function q22() {
-    alert(a);
+  alert(a);
 }
-
+// alert will === 5
 
 //#3
 function q3() {
-    window.a = "hello";
+  window.a = "hello";
 }
-
 
 function q32() {
-    alert(a);
+  alert(a);
 }
+
+// a will equal hello as in the first function we set a = hello but as part of the window(root scope)
 
 //#4
 var a = 1;
 function q4() {
-    var a = "test";
-    alert(a);
+  var a = "test";
+  alert(a);
 }
+// alert will === test but a will remain as 1
 
 //#5
 var a = 2;
 if (true) {
-    var a = 5;
-    alert(a);
+  var a = 5;
+  alert(a);
 }
 alert(a);
+//alert 5 will pop up and then alert 5
