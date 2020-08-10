@@ -26,14 +26,14 @@ const urls = [
   "http://swapi.dev/api/people/1",
   "http://swapi.dev/api/people/2",
   "http://swapi.dev/api/people/3",
-  "http://swapi.dev/api/peole/4",
+  "http://swapi.dev/api/people/4",
 ];
 
 Promise.all(urls.map(url =>
   fetch(url).then(result => result.json())
 ))
-  .then((peopleArray) => {
-    console.log(peopleArray);
+  .then(peopleArray => {
+    peopleArray.forEach(person => console.log(person.name));
   })
   .catch(error => console.log("Oops, thats not right", error));
 
